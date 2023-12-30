@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+.container2 {
+  margin-top: 20px;
+  margin-left: 10px;
+  padding: 20px;
+}
+
+.nav {
+  font-size: 18px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.main {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.View-Categories {
+  font-size: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  color: black;
+  text-align: center;
+
+}
+
+.header {
+  color: blue;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}
+
+table tr th {
+
+  padding: 10px;
+  margin: 100px;
+}
+
+table th {
+  border: 1px solid rgb(19, 2, 105);
+}
+
+button {
+  margin-left: 10px;
+  padding: 5px;
+  display: inline-block;
+  background-color: #eee;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+  color: rgb(2, 2, 77);
+  color: white;
+  cursor: pointer;
+  white-space: nowrap;
+
+}
+
+.accept {
+  background-color: green;
+}
+
+.reject,
+.delete {
+  background-color: red;
+}
+
+.edit {
+  background-color: blue;
+}
+
+.div1 {
+  width: 100%;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background-color: #ccc;
+}
+
+.header {
+  color: blue;
+}
+
+table {
+  width: 100%;
+}
+
+table tr th {
+
+  padding: 10px;
+  margin: 100px;
+}
+
+table th {
+  border: 1px solid rgb(19, 2, 105);
+}
+
+
+
+
+label {
+  font-weight: bold;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+  white-space: nowrap;
+}
+
+.responsive-table th,
+.responsive-table td {
+  padding: 8px;
+  border: 1px solid #ddd;
+}
