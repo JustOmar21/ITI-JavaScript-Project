@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/address.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/address.css" />
     <title>M Store</title>
 </head>
 
@@ -16,8 +16,12 @@
             <li class="navItem"><a href="#">Home</a></li>
             <li class="navItem"><a href="#">Shop</a></li>
             <li class="navItem"><a href="#">Categories</a></li>
-            <li class="navImg1"><a href=""><img src="assets/external/heart.png" alt=""></a></li>
-            <li class="navImg2"><a href=""><img src="assets/external/shopcart.png" alt=""></a></li>
+            <li class="navImg1">
+                <a href=""><img src="assets/external/heart.png" alt="" /></a>
+            </li>
+            <li class="navImg2">
+                <a href=""><img src="assets/external/shopcart.png" alt="" /></a>
+            </li>
             <div class="totalPrice">
                 <p class="textPrice">Total</p>
                 <p class="price">234$</p>
@@ -26,35 +30,34 @@
     </nav>
     <!-- #endregion -->
 
-
     <!-- #region Shipping Form-->
     <div class="container">
         <form class="shippingForm">
-            <label for="fName">First Name <sup>*</sup></label><br>
-            <input type="text" name="fName" class="fName" id="fName"><br>
-            <span class="fNameVali"></span><br>
+            <label for="fName">First Name <sup>*</sup></label><br />
+            <input type="text" name="fName" class="fName" id="fName" /><br />
+            <span class="fNameVali"></span><br />
 
-            <label for="lName">Last Name <sup>*</sup></label><br>
-            <input type="text" name="lName" class="lName" id="lName"><br>
-            <span class="lNameVali"></span><br>
+            <label for="lName">Last Name <sup>*</sup></label><br />
+            <input type="text" name="lName" class="lName" id="lName" /><br />
+            <span class="lNameVali"></span><br />
 
-            <label for="address">Street Address <sup>*</sup></label><br>
-            <input type="text" name="address" class="address" id="address"><br>
-            <span class="addressVali"></span><br>
+            <label for="address">Street Address <sup>*</sup></label><br />
+            <input type="text" name="address" class="address" id="address" /><br />
+            <span class="addressVali"></span><br />
 
-            <label for="city">City <sup>*</sup></label><br>
-            <input type="text" name="city" class="city" id="city"><br>
-            <span class="cityVali"></span><br>
+            <label for="city">City <sup>*</sup></label><br />
+            <input type="text" name="city" class="city" id="city" /><br />
+            <span class="cityVali"></span><br />
 
-            <label for="state">State / Province <sup>*</sup></label><br>
-            <input type="text" name="state" class="state" id="state"><br>
-            <span class="stateVali"></span><br>
+            <label for="state">State / Province <sup>*</sup></label><br />
+            <input type="text" name="state" class="state" id="state" /><br />
+            <span class="stateVali"></span><br />
 
-            <label for="zipcode">Zip / Postal Code <sup>*</sup></label><br>
-            <input type="text" name="zipcode" class="zipcode" id="zipcode"><br>
-            <span class="zipcodeVali"></span><br>
+            <label for="zipcode">Zip / Postal Code <sup>*</sup></label><br />
+            <input type="text" name="zipcode" class="zipcode" id="zipcode" /><br />
+            <span class="zipcodeVali"></span><br />
 
-            <label for="country">Country <sup>*</sup></label><br>
+            <label for="country">Country <sup>*</sup></label><br />
             <select name="country" class="country" id="country">
                 <!-- #region Dropdown with all countries-->
                 <option value="" disabled selected>Choose a Country</option>
@@ -243,7 +246,9 @@
                 <option value="RU">Russian Federation 🇷🇺</option>
                 <option value="RW">Rwanda 🇷🇼</option>
                 <option value="BL">Saint Barthélemy 🇧🇱</option>
-                <option value="SH">Saint Helena, Ascension and Tristan da Cunha 🇸🇭</option>
+                <option value="SH">
+                    Saint Helena, Ascension and Tristan da Cunha 🇸🇭
+                </option>
                 <option value="KN">Saint Kitts and Nevis 🇰🇳</option>
                 <option value="LC">Saint Lucia 🇱🇨</option>
                 <option value="MF">Saint Martin 🇲🇫</option>
@@ -263,7 +268,9 @@
                 <option value="SB">Solomon Islands 🇸🇧</option>
                 <option value="SO">Somalia 🇸🇴</option>
                 <option value="ZA">South Africa 🇿🇦</option>
-                <option value="GS">South Georgia and the South Sandwich Islands 🇬🇸</option>
+                <option value="GS">
+                    South Georgia and the South Sandwich Islands 🇬🇸
+                </option>
                 <option value="ES">Spain 🇪🇸</option>
                 <option value="LK">Sri Lanka 🇱🇰</option>
                 <option value="SD">Sudan 🇸🇩</option>
@@ -305,34 +312,31 @@
                 <option value="ZM">Zambia 🇿🇲</option>
                 <option value="ZW">Zimbabwe 🇿🇼</option>
                 <!-- #endregion -->
-            </select><br>
-            <span class="countryVali"></span><br>
+            </select><br />
+            <span class="countryVali"></span><br />
 
+            <label for="phone">Phone Number <sup>*</sup></label><br />
+            <input type="tel" name="phone" class="phone" id="phone" /><br />
+            <span class="phoneVali"></span><br />
 
-            <label for="phone">Phone Number <sup>*</sup></label><br>
-            <input type="tel" name="phone" class="phone" id="phone"><br>
-            <span class="phoneVali"></span><br>
-
-            <label for="orderNotes">Order Notes (Optional)</label><br>
+            <label for="orderNotes">Order Notes (Optional)</label><br />
             <textarea name="orderNotes" class="orderNotes" id="OrderNotes"
-                placeholder="Notes about your order. e.g special notes for deilvery"></textarea><br>
-            <br><br>
+                placeholder="Notes about your order. e.g special notes for deilvery"></textarea><br />
+            <br /><br />
             <button type="submit" class="submit" id="submit">Save Info</button>
-            </form>
-            
+        </form>
     </div>
     <!-- #endregion -->
-
 
     <!-- #region Footer-->
     <footer>
         <p class="logo">M Store</p>
         <div class="socials">
-            <a href=""><img src="assets/external/facebook.png" alt=""></a>
-            <a href=""><img src="assets/external/twitter.png" alt=""></a>
-            <a href=""><img src="assets/external/instagram.png" alt=""></a>
-            <a href=""><img src="assets/external/linkedin.png" alt=""></a>
-            <a href=""><img src="assets/external/youtube.png" alt=""></a>
+            <a href=""><img src="assets/external/facebook.png" alt="" /></a>
+            <a href=""><img src="assets/external/twitter.png" alt="" /></a>
+            <a href=""><img src="assets/external/instagram.png" alt="" /></a>
+            <a href=""><img src="assets/external/linkedin.png" alt="" /></a>
+            <a href=""><img src="assets/external/youtube.png" alt="" /></a>
             <p>Icon made by Freepik from www.flaticon.com</p>
             <p>Copywrite 2024 &copy; M Store. All Rights Reserved</p>
         </div>
