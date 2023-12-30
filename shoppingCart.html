@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/shoppingCart.css">
+    <title>M Store</title>
+</head>
+
+<body>
+    <!-- #region Navigation-->
+    <nav class="nav">
+        <ul class="navList">
+            <p class="logo">M Store</p>
+            <li class="navItem"><a href="#">Home</a></li>
+            <li class="navItem"><a href="#">Shop</a></li>
+            <li class="navItem"><a href="#">Categories</a></li>
+            <li class="navImg1"><a href=""><img src="assets/external/heart.png" alt=""></a></li>
+            <li class="navImg2"><a href=""><img src="assets/external/shopcart.png" alt=""></a></li>
+            <div class="totalPrice">
+                <p class="textPrice">Total</p>
+                <p class="priceTotal">234$</p>
+            </div>
+        </ul>
+    </nav>
+    <!-- #endregion -->
+
+
+    <div class="container">
+        <p class="link"><a href="">Home</a> /<span class="currentCat"> <a href="">Cart</a></span></p>
+        <p class="title">Shopping Cart</p>
+        <div class="content">
+            <!-- #region Item Table-->
+            <div class="orderItems">
+                <table>
+                    <tr class="header">
+                        <th class="itemDetails">Item</th>
+                        <th>Price</th>
+                        <th>Qty</th>
+                        <th colspan="2">Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td class="itemDetails">
+                            <img src="assets/products/electronic1.jpg" alt="">
+                            <span class="itemTitle">a random laptop that probably sucks</span>
+                        </td>
+                        <td class="price">99.99$</td>
+                        <td class="qty">
+                            <button class="subtract">-</button>
+                            <input class="itemQuantity" value="1">
+                            <button class="add">+</button>
+                        </td>
+                        <td class="subtotal">99.99$</td>
+                        <td class="deleteItem">X</td>
+                    </tr>
+                    <tr>
+                        <td class="itemDetails">
+                            <img src="assets/products/electronic1.jpg" alt="">
+                            <span class="itemTitle">a random laptop that probably sucks</span>
+                        </td>
+                        <td class="price">99.99$</td>
+                        <td class="qty">
+                            <button class="subtract">-</button>
+                            <input class="itemQuantity" value="1">
+                            <button class="add">+</button>
+                        </td>
+                        <td class="subtotal">99.99$</td>
+                        <td class="deleteItem">X</td>
+                    </tr>
+                    <tr>
+                        <td class="itemDetails">
+                            <img src="assets/products/electronic1.jpg" alt="">
+                            <span class="itemTitle">a random laptop that probably sucks</span>
+                        </td>
+                        <td class="price">99.99$</td>
+                        <td class="qty">
+                            <button class="subtract">-</button>
+                            <input readonly class="itemQuantity" value="1">
+                            <button class="add">+</button>
+                        </td>
+                        <td class="subtotal">99.99$</td>
+                        <td class="deleteItem">X</td>
+                    </tr>
+                </table>
+                <!-- <button onclick="tableRowBuilder()">Build</button> -->
+            </div>
+            <!-- #endregion -->
+            
+            <!-- #region Order Details-->
+            <div class="orderDetails">
+                <input class="coupon" type="text" placeholder="Enter Coupon">
+                <button class="couponBtn">Apply</button>
+                <div class="orderPrices">
+                    <p><span class="pricesName">Subtotal</span> <span class="prices pricesItem">99.99$</span></p>
+                    <p><span class="pricesName">Discount</span> <span class="prices pricesDiscount">-24.99$</span></p>
+                    <p><span class="pricesName">Shipping</span> <span class="prices pricesShipping">9.99$</span></p>
+                    <p><span class="pricesName">TOTAL</span> <span class="pricesTotal">84.99$</span></p>
+                    <span class="emptyCart">asds</span>
+                </div>
+                <button class="order">PLACE ORDER</button>
+            </div>
+            <!-- #endregion -->
+        </div>
+    </div>
+
+
+    <!-- #region Footer-->
+    <footer>
+        <p class="logo">M Store</p>
+        <div class="socials">
+            <a href=""><img src="assets/external/facebook.png" alt=""></a>
+            <a href=""><img src="assets/external/twitter.png" alt=""></a>
+            <a href=""><img src="assets/external/instagram.png" alt=""></a>
+            <a href=""><img src="assets/external/linkedin.png" alt=""></a>
+            <a href=""><img src="assets/external/youtube.png" alt=""></a>
+            <p>Icon made by Freepik from www.flaticon.com</p>
+            <p>Copywrite 2024 &copy; M Store. All Rights Reserved</p>
+        </div>
+    </footer>
+    <!-- #endregion -->
+    <script src="JS/shoppingCart.js"></script>
+
+</body>
+
+</html>
