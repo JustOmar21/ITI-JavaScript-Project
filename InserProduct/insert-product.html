@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insert Product</title>
   <link rel="stylesheet" href="../dashboard/style.css" />
-  <link rel="stylesheet" href="../InserProduct/inser-product.css" />
+  <link rel="stylesheet" href="InserProduct.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
   <style></style>
@@ -127,7 +127,7 @@
       <div class="cardBox">
         <div class="card">
           <div>
-            <div class="numbers">100</div>
+            <p class="numbers productNumbers">100</p>
             <div class="cardName">Products</div>
           </div>
 
@@ -171,15 +171,11 @@
       </div>
       <!--End   Cards -->
       <!-- Order Details List  -->
-
-      <!-- <div class="insert-product">
-            <i class="ri-cash-line"></i> <span> </span> insert product
-          </div> -->
       <!--Start-Form-->
       <form class="Form">
 
         <label for="productID">product-ID</label>
-        <input type="text" id="productID" />
+        <input type="text" id="productID" readonly/>
         <br>
         <span class="ProductVali"></span>
         <br><br>
@@ -196,7 +192,6 @@
         <label for="produccategoryID">Product Category</label>
         <select name="categoryID" id="categoryID">
           <option value="" disabled selected>Select a category</option>
-          <option value="1">CategoryName</option>
         </select>
         <br>
         <span class="categoryVali"></span>
@@ -228,18 +223,19 @@
         <label for="description">product Description</label>
         <textarea name="description" id="description" cols="10" rows="5"></textarea>
         <br><br><br>
-      
 
-    <input type="submit" />
-  </div>
-  </form>
-  <!--End-Form-->
+
+        <input type="submit" />
+    </div>
+    </form>
+    <!--End-Form-->
   </div>
   </div>
 
   <!-- End of side bar-->
   <!--  Scripts   -->
-  <script src="../InserProduct/Insert-Product.js"></script>
+  <script src="InsertProduct.js"></script>
+
 
   <!--  ionicons  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

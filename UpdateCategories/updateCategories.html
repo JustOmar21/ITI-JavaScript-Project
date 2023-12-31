@@ -5,15 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insert Product</title>
+
+  <link rel="stylesheet" href="updateCategories.css" />
   <link rel="stylesheet" href="../dashboard/style.css" />
 
-  <link rel="stylesheet" href="../ViewCategory/viewCtegories.css" />
-
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <style></style>
 </head>
 
 <body>
-  <!--Start of Sidebar-->
+  <!--Start of side bar-->
   <!--  Navigation  -->
   <div class="container">
     <div class="navigation">
@@ -160,7 +161,7 @@
 
         <div class="card">
           <div>
-            <div class="numbers">842</div>
+            <div class="numbers orderNumber">842</div>
             <div class="cardName">Orders</div>
           </div>
 
@@ -171,37 +172,40 @@
       </div>
       <!--End   Cards -->
       <!-- Order Details List  -->
-      <div class="div1">
-        <div class="View-Categories">
-          <i class="ri-cash-line"></i> <span> </span> View Categories
+      <div class="container">
+        <div class="insert-category">
+          <i class="ri-cash-line"></i> <span> </span> Update Cateogry
         </div>
-      </div>
-      <div class="table-container">
-        <div class="details">
-          <table class="responsive-table">
-            <tr class="header">
-              <th>category ID</th>
-              <th>Category title</th>
-              <th>Category description</th>
-              <th>Edit Category</th>
-            </tr>
-            <!-- <tr>
-              <td class="categoryID">1</td>
-              <td class="categoryTitle">chair</td>
-              <td class="categoryDesc">Lorem ipsum dolor sit amet.</td>
-              <td class="categoryOperations">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-              </td>
-            </tr> -->
-          </table>
-        </div>
-      </div>
+        <form class="Form">
+
+        <label for="categoryID">Cateogry ID</label>
+        <br>
+        <input type="number" id="categoryID" readonly/>
+        <br>
+
+        <label for="categoryName">Cateogry Name</label>
+        <br>
+        <input type="text" id="categoryName" />
+        <br>
+        <span class="nameVali"></span>
+        <br><br>
+
+        <label for="categoryDescription">Cateogry Description</label>
+        <br>
+        <textarea name="categoryDescription" id="categoryDescription" cols="10" rows="5"></textarea>
+        <br>
+        <input type="submit" value="Update" />
+        <br>
+
+
+      </form>
     </div>
   </div>
 
+  <!--End of side bar-->
+
   <!--  Scripts   -->
-  <script src="../ViewCategory/ViewCategories.js"></script>
+  <script src="updateCategories.js"></script>
 
   <!--  ionicons  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

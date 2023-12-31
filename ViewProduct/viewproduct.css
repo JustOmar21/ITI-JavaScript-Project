@@ -28,7 +28,7 @@ body {
     }
     
     .View-Products {
-      font-size: 20px;
+      font-size: 12px;
       margin-bottom: 20px;
       text-align: center;
       margin-top: 10px;
@@ -45,6 +45,14 @@ body {
       
       padding: 10px;
       margin : 100px;
+    }
+    img {
+      width: 70px;
+      height: 100px;
+      object-fit: cover;
+    }
+    td {
+      text-align: center;
     }
     table th {
       border: 1px solid rgb(19, 2, 105);
@@ -64,12 +72,12 @@ body {
       
     }
     
-    .Delete{
+    .delete{
       background-color: red;
       color: #eee;
 
     }
-    .Edit{
+    .edit{
       background-color: rgba(0, 0, 255, 0.744);
       color: #eee;
     }

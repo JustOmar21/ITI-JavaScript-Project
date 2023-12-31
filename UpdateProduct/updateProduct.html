@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Insert Product</title>
   <link rel="stylesheet" href="../dashboard/style.css" />
-
-  <link rel="stylesheet" href="../ViewCategory/viewCtegories.css" />
+  <link rel="stylesheet" href="updateProduct.css" />
 
   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <style></style>
 </head>
 
 <body>
-  <!--Start of Sidebar-->
+  <!-- Start of side bar-->
   <!--  Navigation  -->
   <div class="container">
     <div class="navigation">
@@ -76,7 +76,7 @@
         </li>
 
         <li>
-          <a href="../InserProduct/insert-product.html">
+          <a href="../ViewProduct/Viewproduct.html">
             <span class="icon">
               <ion-icon name="add-outline"></ion-icon>
             </span>
@@ -127,7 +127,7 @@
       <div class="cardBox">
         <div class="card">
           <div>
-            <div class="numbers">100</div>
+            <p class="numbers productNumbers">100</p>
             <div class="cardName">Products</div>
           </div>
 
@@ -171,37 +171,71 @@
       </div>
       <!--End   Cards -->
       <!-- Order Details List  -->
-      <div class="div1">
-        <div class="View-Categories">
-          <i class="ri-cash-line"></i> <span> </span> View Categories
-        </div>
-      </div>
-      <div class="table-container">
-        <div class="details">
-          <table class="responsive-table">
-            <tr class="header">
-              <th>category ID</th>
-              <th>Category title</th>
-              <th>Category description</th>
-              <th>Edit Category</th>
-            </tr>
-            <!-- <tr>
-              <td class="categoryID">1</td>
-              <td class="categoryTitle">chair</td>
-              <td class="categoryDesc">Lorem ipsum dolor sit amet.</td>
-              <td class="categoryOperations">
-                <button class="edit">Edit</button>
-                <button class="delete">Delete</button>
-              </td>
-            </tr> -->
-          </table>
-        </div>
-      </div>
+      <!--Start-Form-->
+      <form class="Form">
+
+        <label for="productID">product-ID</label>
+        <input type="text" id="productID" readonly/>
+        <br>
+        <span class="ProductVali"></span>
+        <br><br>
+
+
+
+        <label for="productName">Product Name</label>
+        <input type="text" id="productName" />
+        <br>
+        <span class="productNameVali"></span>
+        <br><br>
+
+
+        <label for="produccategoryID">Product Category</label>
+        <select name="categoryID" id="categoryID">
+          <option value="" disabled selected>Select a category</option>
+        </select>
+        <br>
+        <span class="categoryVali"></span>
+        <br><br>
+
+
+
+        <label for="image">Product image </label>
+        <input type="text" id="image" />
+        <br>
+        <span class="imgVali"></span>
+        <br><br>
+
+
+        <label for="Quantity">Quantity</label>
+        <input type="text" id="Quantity" />
+        <br>
+        <span class="quanVali"></span>
+        <br><br>
+
+
+        <label for="productprice">Product Price</label>
+        <input type="text" id="productprice" />
+        <br>
+        <span class="priceVali"></span>
+        <br><br>
+
+
+        <label for="description">product Description</label>
+        <textarea name="description" id="description" cols="10" rows="5"></textarea>
+        <br><br><br>
+
+
+        <input type="submit" value="Update" />
     </div>
+    </form>
+    <!--End-Form-->
+  </div>
   </div>
 
+  <!-- End of side bar-->
   <!--  Scripts   -->
-  <script src="../ViewCategory/ViewCategories.js"></script>
+  <script src="updateProduct.js"></script>
+
 
   <!--  ionicons  -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
