@@ -44,6 +44,17 @@ class Product {
     }
 }
 
+class ShoppingCart {
+
+    constructor(id , productID , quantity , userID)
+    {
+        this.id = id;
+        this.productID;
+        this.quantity = quantity;
+        this.userID = userID;
+    }
+}
+
 class Order {
 
     constructor(id , productID , quantity , status , userID){
