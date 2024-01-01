@@ -156,7 +156,7 @@ form.addEventListener("submit", function (e) {
 
   validateAll();
   let status =
-    productNameStatus && imgValiStatus && quanValiStatus && priceValiStatus;
+    productNameStatus && imgValiStatus && quanValiStatus && priceValiStatus && categoryStatus;
 
   if (status) {
     let products = localStorage.getItem("product")
