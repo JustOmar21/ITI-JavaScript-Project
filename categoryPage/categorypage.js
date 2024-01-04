@@ -4,92 +4,88 @@ console.log(container);
 
 getData();
 
-function getData()
-{
-   let categories = localStorage.getItem("category");
-   categories = JSON.parse(categories) || [];
+function getData() {
+  let categories = localStorage.getItem("category");
+  categories = JSON.parse(categories) || [];
 
-   let products = localStorage.getItem("product");
-   products = JSON.parse(products) || [];
-   
-   for(let singleCat of categories)
-   {
-      let notEmpty = false;
-      for(let prod of products)
-      {
-         if(prod.categoryID == singleCat.id)
-         {
-            notEmpty = true;
-         }
+  let products = localStorage.getItem("product");
+  products = JSON.parse(products) || [];
+
+  for (let singleCat of categories) {
+    let notEmpty = false;
+    for (let prod of products) {
+      if (prod.categoryID == singleCat.id) {
+        notEmpty = true;
       }
-      if(notEmpty)
-      {
-         categoryBuilder(singleCat);
-      }
-      
-   }
+    }
+    if (notEmpty) {
+      categoryBuilder(singleCat);
+    }
+  }
 }
 
-function categoryBuilder(Category)
-{
-   let gallaryDiv = document.createElement("div");
-   gallaryDiv.classList.add("gallary");
+function categoryBuilder(Category) {
+  let gallaryDiv = document.createElement("div");
+  gallaryDiv.classList.add("gallary");
 
-   let categoryName = document.createElement("h2");
-   categoryName.innerHTML = Category.name;
-   gallaryDiv.appendChild(categoryName);
+  let categoryName = document.createElement("h2");
+  categoryName.innerHTML = Category.name;
+  gallaryDiv.appendChild(categoryName);
 
-   let products = localStorage.getItem("product");
-   products = JSON.parse(products) || [];
+  let products = localStorage.getItem("product");
+  products = JSON.parse(products) || [];
 
-   let counter = 0;
-   for(let prod of products)
-   {
-      if(prod.categoryID == Category.id && counter < 3)
-      {
-         productBuilder(prod , gallaryDiv);
-         counter++;
-      }
-   }
+  let counter = 0;
+  for (let prod of products) {
+    if (prod.categoryID == Category.id && counter < 3) {
+      productBuilder(prod, gallaryDiv);
+      counter++;
+    }
+  }
 
-   let seeMoreLink = document.createElement("a");
-   seeMoreLink.innerHTML = "See More";
+  let seeMoreLink = document.createElement("a");
+  seeMoreLink.innerHTML = "See More";
 
-   let seeMoreH = document.createElement("h5");
+  let seeMoreH = document.createElement("h5");
+  seeMoreH.addEventListener("click", () => categoryPage(Category.id));
 
-   seeMoreH.appendChild(seeMoreLink);
-   gallaryDiv.appendChild(seeMoreH);
+  seeMoreH.appendChild(seeMoreLink);
+  gallaryDiv.appendChild(seeMoreH);
 
-   container.appendChild(gallaryDiv);
+  container.appendChild(gallaryDiv);
 }
 
-function productBuilder( prod , gallaryDiv)
-{
-   let productDiv = document.createElement("div");
-   productDiv.classList.add("contant");
+function productBuilder(prod, gallaryDiv) {
+  let productDiv = document.createElement("div");
+  productDiv.classList.add("contant");
 
-   let productImg = document.createElement("img");
-   productImg.classList.add("images");
-   productImg.src = prod.image;
+  let productImg = document.createElement("img");
+  productImg.classList.add("images");
+  productImg.src = prod.image;
 
-   let productName = document.createElement("h3");
-   productName.innerHTML = prod.name;
+  let productName = document.createElement("h3");
+  productName.innerHTML = prod.name;
 
-   let productDesc = document.createElement("p");
-   productDesc.innerHTML = prod.description;
-   
-   let productPrice = document.createElement("h6");
-   productPrice.innerHTML = `${prod.price}$`;
+  let productDesc = document.createElement("p");
+  productDesc.innerHTML = prod.description;
 
-   let cartBtn = document.createElement("button");
-   cartBtn.classList.add("Addtocart");
-   cartBtn.innerHTML = "Add to Cart";
+  let productPrice = document.createElement("h6");
+  productPrice.innerHTML = `${prod.price}$`;
 
-   productDiv.appendChild(productImg);
-   productDiv.appendChild(productName);
-   productDiv.appendChild(productDesc);
-   productDiv.appendChild(productPrice);
-   productDiv.appendChild(cartBtn);
+  let cartBtn = document.createElement("button");
+  cartBtn.classList.add("Addtocart");
+  cartBtn.innerHTML = "Add to Cart";
 
-   gallaryDiv.appendChild(productDiv);
+  productDiv.appendChild(productImg);
+  productDiv.appendChild(productName);
+  productDiv.appendChild(productDesc);
+  productDiv.appendChild(productPrice);
+  productDiv.appendChild(cartBtn);
+
+  gallaryDiv.appendChild(productDiv);
+}
+
+function categoryPage(catID) {
+  localStorage.setItem("selectedCatID", catID);
+  location.assign("../singleCategoryPage/singleCategoryPage.html");
 }
