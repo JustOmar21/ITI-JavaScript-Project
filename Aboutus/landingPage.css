@@ -121,15 +121,16 @@ header .container {
 .btn {
   display: inline-block;
   padding: 0.9rem 1.9rem;
-  color: #fff !important;
-  background-color: var(--mainColor);
+  color: #000 !important;
+  background-color: #069b6e41;
+
   border-radius: 16px;
   text-transform: capitalize;
   transition: 0.3s;
 }
 
 .btn:hover {
-  background-color: var(--hoverColor);
+  background-color: #043a2a41;
   transform: scale(1) !important;
 }
 
@@ -275,6 +276,7 @@ header .container {
   0% {
     clip-path: circle(30% at -25% -25%);
   }
+
   100% {
     clip-path: circle(150% at 0 0);
   }
