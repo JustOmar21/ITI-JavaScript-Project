@@ -16,7 +16,7 @@ function getData() {
    let categoryID = localStorage.getItem("selectedCatID");
    if(categoryID == null)
    {
-      alert("you cannot access this page directly, please enter from the categories page");
+      alert("you cannot access this page directly, please enter from the Categories Page");
       location.assign("../categoryPage/categorypage.html");
    }
 
@@ -45,6 +45,10 @@ function productBuilder(prod, gallaryDiv) {
    let productDiv = document.createElement("div");
    productDiv.classList.add("contant");
 
+   let divContain = document.createElement("div");
+   divContain.classList.add("ProductDetails");
+   divContain.addEventListener("click", () => productPage(prod.id));
+
    let productImg = document.createElement("img");
    productImg.classList.add("images");
    productImg.src = prod.image;
@@ -62,11 +66,18 @@ function productBuilder(prod, gallaryDiv) {
    cartBtn.classList.add("Addtocart");
    cartBtn.innerHTML = "Add to Cart";
 
-   productDiv.appendChild(productImg);
-   productDiv.appendChild(productName);
-   productDiv.appendChild(productDesc);
-   productDiv.appendChild(productPrice);
+   divContain.appendChild(productImg);
+   divContain.appendChild(productName);
+   divContain.appendChild(productDesc);
+   divContain.appendChild(productPrice);
+   productDiv.appendChild(divContain);
    productDiv.appendChild(cartBtn);
 
    gallaryDiv.appendChild(productDiv);
+}
+
+function productPage(prodID)
+{
+   localStorage.setItem("currentProductID" , prodID);
+   location.assign("../productDetails.html");
 }
