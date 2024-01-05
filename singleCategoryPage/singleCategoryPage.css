@@ -78,6 +78,12 @@ a{
       display: block;
 
 }
+
+.ProductDetails
+{
+   cursor: pointer;
+}
+
 p{
       text-align:center;
       color: #b2bec3;
