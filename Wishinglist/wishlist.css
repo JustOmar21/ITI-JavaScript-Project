@@ -2,32 +2,32 @@
 
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f2f2f2;
-    min-height: 100vh;
-    overflow-x: hidden;
-    border-radius: 10px;
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #f2f2f2;
+   min-height: 100vh;
+   overflow-x: hidden;
+   border-radius: 10px;
 }
 
 .container {
-    display: block;
-    justify-content: space-around;
-    margin-top: 20px;
-    border-radius: 10px;
+   display: block;
+   justify-content: space-around;
+   margin-top: 20px;
+   border-radius: 10px;
 
 }
 
 .table {
 
-    display: block;
-    margin-top: 10px;
-    background-color: #eee;
-    width: 80%;
-    margin-left: 10%;
-    overflow-x: auto;
-    border-radius: 10px;
+   display: block;
+   margin-top: 10px;
+   background-color: #eee;
+   width: 80%;
+   margin-left: 10%;
+   overflow-x: auto;
+   border-radius: 10px;
 }
 
 /* .header{
@@ -38,134 +38,133 @@ body {
 
 .header {
 
-    color: rgb(0, 0, 0);
-    background-color: #069b6e41;
-    width: 100%;
-    text-align: center;
+   color: rgb(0, 0, 0);
+   background-color: #069b6e41;
+   width: 100%;
+   text-align: center;
 }
 
 .header th {
-    width: 25%;
-    font-size: 21px;
+   width: 25%;
+   font-size: 21px;
 }
 
 table,
 th,
 tr,
 td {
-    border-collapse: collapse;
-    padding: 20px;
-    font-size: large;
-    text-align: center;
-    width: 50%;
+   border-collapse: collapse;
+   padding: 20px;
+   font-size: large;
+   text-align: center;
+   width: 50%;
+}
+
+.itemTitle {
+   word-wrap: break-word;
+   display: inline-block;
 }
 
 button {
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 8px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-    padding: 6px 12px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
+   padding: 10px;
+   width: 50px;
+   height: 50px;
+   border-radius: 8px;
+   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+   padding: 6px 12px;
+   border: none;
+   border-radius: 50%;
+   cursor: pointer;
 }
 
-.Add {
-    background-color: green;
+.add {
+   background-color: dodgerblue;
 }
 
 .remove {
-    background-color: red;
+   background-color: tomato;
 }
 
-.fa-check,
+.fa-cart-shopping {
+   margin-left: -5px;
+}
+
+.fa-cart-shopping,
 .fa-xmark {
-    color: white;
+   color: white;
 }
 
 i {
-    font-size: 30px;
+   font-size: 30px;
 }
 
 td.itemDetails {
-    display: flex;
-    align-items: center;
-    padding: 15px;
+   display: flex;
+   align-items: center;
+   padding: 15px;
 
-}
-
-.ProductID {
-    padding: 10px;
-    background-color: #2c010151;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 20px;
-    color: white;
 }
 
 /* Make it Disable when u want to disappear from user Ui*/
-/* .ProductID {
-    display: none;
-} */
+.wishID,
+.itemremove {
+   display: none;
+}
 
 .itemDetails {
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+   border-top-left-radius: 10px;
+   border-bottom-left-radius: 10px;
 }
 
 .itemremove {
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+   border-top-right-radius: 10px;
+   border-bottom-right-radius: 10px;
 }
 
 /* #endregion */
 .list {
-    list-style: none;
-    padding: 0;
+   list-style: none;
+   padding: 0;
 }
 
 .wishlist {
-    width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    background-color: #0fae8154;
-    margin-top: 20px;
+   width: 100%;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   padding: 10px;
+   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+   background-color: #0fae8154;
+   margin-top: 20px;
 }
 
 .wishlistproduct {
-    width: 81%;
-    height: 570px;
-    border: 1px solid #cccccc81;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 10%;
-    background-color: #cccccc36;
+   width: 81%;
+   height: 570px;
+   border: 1px solid #cccccc81;
+   border-radius: 5px;
+   padding: 10px;
+   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+   margin-top: 20px;
+   display: flex;
+   justify-content: space-around;
+   margin-left: 10%;
+   background-color: #cccccc36;
 }
 
 .wishlist h2 {
-    text-align: center;
-    margin-bottom: 10px;
+   text-align: center;
+   margin-bottom: 10px;
 }
 
 i {
-    color: red;
+   color: red;
 }
 
 .list li {
-    padding: 8px;
-    border-bottom: 1px solid #eee;
+   padding: 8px;
+   border-bottom: 1px solid #eee;
 }
 
 .list li:last-child {
-    border-bottom: none;
+   border-bottom: none;
 }
