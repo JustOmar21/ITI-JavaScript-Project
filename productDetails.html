@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <!-- Set character set and viewport for responsiveness -->
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <!-- Enhance cross-browser consistency and default style normalization -->
+   <link rel="stylesheet" href="CSS/normalize.css" />
+   <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+
+   <!-- Include custom stylesheet -->
+   <link rel="stylesheet" href="CSS/landingPage.css" />
+   <link rel="stylesheet" href="CSS/productDetails.css">
+
+   <!-- Set the title of the webpage -->
+   <title>.Store – Product Details</title>
+
+   <!-- Set favicon -->
+   <link rel="icon" type="image/x-icon" href="Assets/Icons/logo.png" />
+</head>
+
+<body>
+   <main>
+      <div class="big-wrapper light">
+         <img src="Images/LandingPage/shape.png" alt="" class="shape" />
+
+         <header>
+            <div class="container">
+               <div class="logo">
+                  <img src="Assets/Icons/logo.png" alt="Logo" />
+                  <h3>.Store</h3>
+               </div>
+
+               <div class="links">
+                  <ul>
+                     <li><a href="landingPage.html">Home</a></li>
+                     <li><a href="#">About us</a></li>
+                     <li><a href="#">Contact us</a></li>
+                     <li><a href="#" class="btn" id="signout-btn">Sign out</a></li>
+                  </ul>
+               </div>
+
+               <div class="overlay"></div>
+
+               <div class="hamburger-menu">
+                  <div class="bar"></div>
+               </div>
+            </div>
+         </header>
+
+         <div class="showcase-area">
+            <div class="container">
+               <div class="left">
+                  <img id="product-img" src="" alt="">
+               </div>
+
+               <div class="right">
+                  <h3 id="product-name"></h3>
+                  <h2 id="product-price"></h2>
+                  <button id="add-to-cart">Add To Cart</button>
+                  <button id="add-to-wishlist">Add To Wishlist</button>
+                  <P id="product-description"></P>
+               </div>
+            </div>
+         </div>
+
+         <div class="bottom-area">
+            <div class="container">
+            </div>
+         </div>
+      </div>
+   </main>
+
+   <!-- JavaScript Files -->
+
+   <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+   <script src="productDetails.js"></script>
+</body>
+
+</html>

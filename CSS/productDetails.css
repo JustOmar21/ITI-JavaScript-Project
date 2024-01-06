@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.logo h3 {
+    color: #000;
+}
+
+.links a {
+    color: #000;
+}
+
+.links a:hover {
+    color: #0fd09954;
+}
+
+.btn {
+    background-color: #0fae8154;
+    color: #000 !important;
+}
+
+.btn:hover {
+    background-color: #0fd09954;
+}
+
+#product-img {
+    max-width: 500px;
+    max-height: 500px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.showcase-area .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#product-name {
+    color: #000;
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#product-price {
+    color: #000;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#add-to-cart {
+    padding: 0.9rem 1.9rem;
+    color: #000 !important;
+    background-color: #0fae8154;
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+#add-to-cart:hover {
+    background-color: #0fd09954;
+}
+
+#add-to-wishlist {
+   padding: 0.9rem 1.9rem;
+   color: #000 !important;
+   background-color: rgba(255, 0, 0, 0.463);
+   border-radius: 16px;
+   text-transform: capitalize;
+   transition: 0.3s;
+   border: none;
+   margin-bottom: 0.5rem;
+   width: 100%;
+   cursor: pointer;
+}
+
+#add-to-wishlist:hover {
+   background-color: rgba(255, 0, 0, 0.551);
+}
+
+#product-description {
+    color: #000;
+}
+
+@media screen and (max-width: 870px) {
+    .links {
+      background-color: darkgreen;
+    }
+    .links a {
+      color: #fff;
+    }
+    .links .btn {
+      background: none;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    .big-wrapper.active .links {
+      box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+    }
+    #signout-btn {
+    color: #fff !important;
+    }
+}

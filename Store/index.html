@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Set character set and viewport for responsiveness -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Enhance cross-browser consistency and default style normalization -->
+  <link rel="stylesheet" href="CSS/normalize.css" />
+  <!-- Include custom stylesheet -->
+  <link rel="stylesheet" href="CSS/loginSignup.css" />
+
+  <!-- Set the title of the webpage -->
+  <title>.Store – log in or sign up</title>
+
+  <!-- Set favicon -->
+  <link rel="icon" type="image/x-icon" href="Assets/Icons/logo.png" />
+</head>
+
+<body>
+  <!-- Container for the sign-up and sign-in forms -->
+  <div class="container" id="container">
+    <!-- Sign-up form -->
+    <div class="form-container sign-up">
+      <form>
+        <h1>Create Account</h1>
+        <span>Hala! Let's get started</span>
+        <!-- Input fields for name, email, and password -->
+        <input type="text" placeholder="Name" id="sign-up-name" />
+        <input type="email" placeholder="Email" id="sign-up-email" />
+        <input type="password" placeholder="Password" id="sign-up-password" required />
+        <!-- Button to trigger sign-up -->
+        <button type="button" id="sign-up-btn">Sign Up</button>
+        <span id="error-message"></span>
+      </form>
+    </div>
+
+    <!-- Sign-in form -->
+    <div class="form-container sign-in">
+      <form action="userType.html">
+        <h1>Sign In</h1>
+        <span>Welcome Back!</span>
+        <!-- Input fields for email and password -->
+        <input type="email" placeholder="Email" id="sign-in-email" />
+        <input type="password" placeholder="Password" id="sign-in-password" />
+        <!-- Link for password recovery -->
+        <a href="resetPassword.html">Forget Your Password?</a>
+        <!-- Button to trigger sign-in -->
+        <button type="button" id="sign-in-btn">Sign In</button>
+        <span id="error-message-login"> </span>
+      </form>
+    </div>
+
+    <!-- Toggle container for switching between sign-up and sign-in forms -->
+    <div class="toggle-container">
+      <div class="toggle">
+        <!-- Left panel for sign-in -->
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details to use all site features</p>
+          <button class="hidden" id="login">Sign In</button>
+        </div>
+
+        <!-- Right panel for sign-up -->
+        <div class="toggle-panel toggle-right">
+          <h1>Hala, Friend!</h1>
+          <p>Register with your personal details to use all site features</p>
+          <button class="hidden" id="register">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include JavaScript file for dynamic behavior -->
+  <script src="Script/loginSignup.js"></script>
+</body>
+
+</html>
