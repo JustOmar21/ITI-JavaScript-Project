@@ -47,7 +47,7 @@ class ShoppingCart {
 
    constructor(id, productID, quantity, userID) {
       this.id = id;
-      this.productID;
+      this.productID = productID;
       this.quantity = quantity;
       this.userID = userID;
    }
@@ -55,10 +55,11 @@ class ShoppingCart {
 
 class Order {
 
-   constructor(id, productID, quantity, status, userID) {
+   constructor(id, productID, quantity, total, status, userID) {
       this.id = id;
       this.productID = productID;
       this.quantity = quantity;
+      this.total = total;
       this.status = status;
       this.userID = userID;
    }
