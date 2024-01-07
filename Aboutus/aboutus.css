@@ -1,38 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-*{
+* {
       padding: 0;
       margin: 0;
       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
       box-sizing: border-box;
 }
-.hero{
+
+
+
+.hero {
       background-color: #f8f8f8;
 }
-.heading  h1{
-color: #ff6347;
-font-size: 55px;
-text-align: center;
-margin-top: 35px;
+
+.heading h1 {
+      color: #ff6347;
+      font-size: 55px;
+      text-align: center;
+      margin-top: 30px;
 }
-.container1{
+
+.container1 {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 90%;
-      margin: 65px auto;
-}
-.hero-content{
-      flex: 1;
-      width: 600px;
-      margin: 0 25px;
-      animation: movingup 2S ease;
+      width: 100%;
+      margin: 60px auto;
+
 }
 
-.hero-content h2{
+.hero-content {
+      flex: 1;
+      width: 600px;
+      margin: 0 20px;
+      animation: movingup 2S ease;
+
+
+}
+
+.hero-content h2 {
       font-size: 38px;
       margin-bottom: 20px;
       color: #333;
+
+
 }
 
 .hero-content p {
@@ -41,94 +52,123 @@ margin-top: 35px;
       margin-bottom: 40px;
       color: #04451b;
 }
+
 .hero-content button {
       display: inline-block;
       border-radius: 10px;
       color: #fff;
-     background-color: #ff4500;
-     padding: 12px 24px ;
-     border: 0;
-     outline: 0;
-     font-size: 20px;
-     cursor: pointer;
-     transition: 0.3s ease;
+      background-color: #ff4500;
+      padding: 12px 24px;
+      border: 0;
+      outline: 0;
+      font-size: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      text-wrap: nowrap;
 }
-.hero-content button:hover{
+
+.hero-content button:hover {
       background-color: #ff6347;
       transform: scale(1.1);
 }
-.hero-image{
+
+.hero-image {
       flex: 1;
       width: 600px;
       margin: auto;
       animation: movingright 2S ease;
 
 }
-img{
+
+img {
       width: 100%;
       height: auto;
       border-radius: 10px;
 }
-.current::selection{
+
+.current::selection {
       background-color: cadetblue;
       font-size: 20px;
       color: wheat;
 }
 
+.shopping,
+.wishing {
+      font-size: 25px;
+      padding: 0;
+      margin: 0;
+}
 
-@media screen and (max-width: 768px){
-      .heading  h1{
+.ri-heart-fill {
+      color: #d23d06;
+}
+
+.ri-shopping-cart-2-fill {
+      color: rgba(9, 128, 94, 0.689);
+}
+
+@media screen and (max-width: 768px) {
+      .heading h1 {
             font-size: 45px;
             margin-top: 30px;
       }
-      .hero{
-           margin: 0px;
+
+      .hero {
+            margin: 0px;
       }
-      .container{
+
+      .container {
             width: 100%;
             flex-direction: column;
             margin: 0;
             padding: 0 40px;
 
       }
-      .hero-content{
+
+      .hero-content {
             width: 100%;
             margin: 35px 0;
       }
-      .hero-content h2{
+
+      .hero-content h2 {
             font-size: 30px;
       }
-      .hero-content p{
+
+      .hero-content p {
             font-size: 18px;
             margin-bottom: 20px;
       }
-      .hero-content button{
+
+      .hero-content button {
             font-size: 16px;
             padding: 8px 16px;
       }
-      .hero-image{
+
+      .hero-image {
             width: 100%;
       }
 }
-      
-@keyframes movingup{
-  0%{
-      opacity: 0;
-      transform: translateY(50PX);
-  }
-  100%{
-      opacity: 1;
-      transform: translateY(0PX);
-  }
+
+@keyframes movingup {
+      0% {
+            opacity: 0;
+            transform: translateY(50PX);
+      }
+
+      100% {
+            opacity: 1;
+            transform: translateY(0PX);
+      }
 }
 
-@keyframes movingright{
-      0%{
-          opacity: 0;
-          transform: translateX(-50PX);
+@keyframes movingright {
+      0% {
+            opacity: 0;
+            transform: translateX(-50PX);
       }
-      100%{
-          opacity: 1;
-          transform: translateX(0PX);
+
+      100% {
+            opacity: 1;
+            transform: translateX(0PX);
       }
-    }
+}

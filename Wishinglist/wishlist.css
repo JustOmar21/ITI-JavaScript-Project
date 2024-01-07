@@ -20,7 +20,6 @@ body {
 }
 
 .table {
-
    display: block;
    margin-top: 10px;
    background-color: #eee;
@@ -119,6 +118,21 @@ td.itemDetails {
 .itemremove {
    border-top-right-radius: 10px;
    border-bottom-right-radius: 10px;
+}
+
+.shopping,
+.wishing {
+   font-size: 25px;
+   padding: 0;
+   margin: 0;
+}
+
+.ri-heart-fill {
+   color: #d23d06;
+}
+
+.ri-shopping-cart-2-fill {
+   color: rgba(9, 128, 94, 0.689);
 }
 
 /* #endregion */

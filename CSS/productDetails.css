@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+
 }
+
 
 
 .logo h3 {
@@ -30,29 +33,37 @@ body {
     max-width: 500px;
     max-height: 500px;
     padding: 5px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
+    border-radius: 20px;
+    background-color: transparent;
+    /* -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(5px 5px 5px #222); */
+    /* -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -o-border-radius: 10px; */
+
 }
 
 .showcase-area .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: rgba(125, 205, 187, 0.1);
+    padding: 0px 100px 100px 100px;
+    border-radius: 3%;
+
+
 }
 
 #product-name {
     color: #000;
-    font-size: 50px;
+    font-size: 25px;
     font-weight: 500;
     margin-bottom: 1rem;
 }
 
 #product-price {
     color: #000;
-    font-size: 30px;
+    font-size: 15px;
     font-weight: 500;
     margin-bottom: 1rem;
 }
@@ -75,43 +86,64 @@ body {
 }
 
 #add-to-wishlist {
-   padding: 0.9rem 1.9rem;
-   color: #000 !important;
-   background-color: rgba(255, 0, 0, 0.463);
-   border-radius: 16px;
-   text-transform: capitalize;
-   transition: 0.3s;
-   border: none;
-   margin-bottom: 0.5rem;
-   width: 100%;
-   cursor: pointer;
+    padding: 0.9rem 1.9rem;
+    color: #000 !important;
+    background-color: rgba(255, 0, 0, 0.463);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+    border: none;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    cursor: pointer;
 }
 
 #add-to-wishlist:hover {
-   background-color: rgba(255, 0, 0, 0.551);
+    background-color: rgba(255, 0, 0, 0.551);
 }
 
 #product-description {
-    color: #000;
+    color: #0000007b;
+    font-size: 25px;
+}
+
+.shopping,
+.wishing {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.ri-heart-fill {
+    color: #d23d06;
+}
+
+.ri-shopping-cart-2-fill {
+    color: rgba(9, 128, 94, 0.689);
 }
 
 @media screen and (max-width: 870px) {
     .links {
-      background-color: darkgreen;
+        background-color: darkgreen;
     }
+
     .links a {
-      color: #fff;
+        color: #fff;
     }
+
     .links .btn {
-      background: none;
+        background: none;
     }
+
     .overlay {
-      background-color: rgba(0, 0, 0, 0.7);
+        background-color: rgba(0, 0, 0, 0.7);
     }
+
     .big-wrapper.active .links {
-      box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
+        box-shadow: 0 0 50px 2px rgba(0, 0, 0, 0.4);
     }
+
     #signout-btn {
-    color: #fff !important;
+        color: #fff !important;
     }
 }

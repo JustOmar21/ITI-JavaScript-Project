@@ -4,6 +4,11 @@ console.log(container);
 
 getData();
 
+if (sessionStorage.getItem("currentUserID") == null) {
+  alert("You are not logged In");
+  location.assign("../Store/index.html");
+}
+
 function getData() {
   let categories = localStorage.getItem("category");
   categories = JSON.parse(categories) || [];
@@ -89,3 +94,9 @@ function categoryPage(catID) {
   localStorage.setItem("selectedCatID", catID);
   location.assign("../singleCategoryPage/singleCategoryPage.html");
 }
+
+const signOutBtn = document.getElementById("signout-btn");
+signOutBtn.addEventListener("click", function () {
+  sessionStorage.removeItem("currentUserID");
+  window.location.assign("../Store/index.html");
+});

@@ -17,6 +17,8 @@ body {
       margin-top: 20px;
       border-radius: 10px;
 
+
+
 }
 
 .table {
@@ -98,20 +100,20 @@ i {
 }
 
 td {
-   text-align: center;
+      text-align: center;
 }
 
 img {
-   width: 100px;
+      width: 100px;
 }
 
 td.itemDetails {
-   display: flex;
-   align-items: center;
+      display: flex;
+      align-items: center;
 }
 
 .itemDetails span {
-   font-weight: 900;
+      font-weight: 900;
 }
 
 /* Make it Disable when u want to disappear from user Ui*/
@@ -178,6 +180,7 @@ td.itemDetails {
 .wishlist h2 {
       text-align: center;
       margin-bottom: 10px;
+
 }
 
 i {

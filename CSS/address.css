@@ -3,10 +3,12 @@ body {
     padding: 0;
     background-color: rgba(78, 155, 157, 0.2);
 }
+
 button {
     font-size: 20px;
     cursor: pointer;
 }
+
 /* #region Navigation Code */
 
 .nav {
@@ -30,12 +32,12 @@ button {
 .navList li {
     display: flex;
     align-items: center;
-   
+
 }
 
 .navList .navItem {
     padding: 30px;
-    
+
 }
 
 .navList .navItem a {
@@ -57,11 +59,13 @@ button {
     margin-left: auto;
 }
 
-.navImg1 a , .navImg2 a {
+.navImg1 a,
+.navImg2 a {
     position: relative;
 }
 
-.navImg1 a::after , .navImg2 a::after {
+.navImg1 a::after,
+.navImg2 a::after {
     content: "0";
     height: 20px;
     width: 20px;
@@ -86,7 +90,7 @@ button {
 
 .totalPrice .textPrice {
     font-size: smaller;
-    margin-bottom: 0px ;
+    margin-bottom: 0px;
     margin-top: 20px;
     color: rgb(3, 42, 34);
 }
@@ -102,7 +106,7 @@ sup {
 .shippingForm input {
     width: 500px;
     padding: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border-radius: 8px;
 }
 
@@ -113,30 +117,33 @@ sup {
 
 .shippingForm span {
     color: red;
-    margin: 10px 0;
+    margin: 5px 0;
 }
+
 textarea {
     resize: none;
     height: 200px;
     width: 500px;
 }
-textarea::placeholder{
-    padding: 10px;
+
+textarea::placeholder {
+    padding: 5px;
 }
 
-.container {
+.container5 {
     width: 700px;
     background-color: rgba(8, 203, 138, 0.121);
     text-align: center;
-    margin: auto;
+    margin: 30px 25% 0px;
+    /* margin: auto; */
     border-radius: 20px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.5);
 }
 
 .shippingForm label {
-    padding: 20px;
+    padding: 5px;
     display: inline-block;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .shippingForm .submit {
@@ -159,7 +166,7 @@ footer {
     text-align: center;
 }
 
-footer .logo{
+footer .logo {
     font-weight: 900;
     font-size: xx-large;
     margin-top: 0;
@@ -171,3 +178,18 @@ footer .socials img {
 }
 
 /* #endregion */
+
+.shopping,
+.wishing {
+    font-size: 25px;
+    padding: 0;
+    margin: 0;
+}
+
+.ri-heart-fill {
+    color: #d23d06;
+}
+
+.ri-shopping-cart-2-fill {
+    color: rgba(9, 128, 94, 0.689);
+}

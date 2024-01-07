@@ -20,13 +20,13 @@
   --lightTwo: #e7e3e3;
 }
 
-*,
+/* *,
 *::before,
 *::after {
-  padding: 0;
+ padding:0px;
   margin: 0;
   box-sizing: border-box;
-}
+} */
 
 body {
   font-family: "Poppins", sans-serif;
@@ -44,6 +44,9 @@ img {
 a {
   text-decoration: none;
 }
+
+
+
 
 .big-wrapper {
   position: relative;
@@ -69,7 +72,6 @@ a {
 header {
   position: relative;
   z-index: 70;
-
 }
 
 header .container {
@@ -108,8 +110,9 @@ header .container {
 }
 
 .links a {
-  color: var(--lightTwo);
+  color: gray;
   margin-left: 3rem;
+
   display: inline-block;
   transition: 0.3s;
 }
@@ -128,11 +131,10 @@ header .container {
   border-radius: 16px;
   text-transform: capitalize;
   transition: 0.3s;
-  font-weight: 500;
 }
 
 .btn:hover {
-  background-color: rgba(2, 47, 2, 0.458);
+  background-color: #043a2a41;
   transform: scale(1) !important;
 }
 

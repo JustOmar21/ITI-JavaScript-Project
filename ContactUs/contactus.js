@@ -41,3 +41,27 @@ const giveError = (field, message) => {
   error.classList.add("err-msg");
   parentElement.appendChild(error);
 };
+
+const signOutBtn = document.getElementById("signout-btn");
+signOutBtn.addEventListener("click", function () {
+  sessionStorage.removeItem("currentUserID");
+  window.location.assign("../Store/index.html");
+});
+
+const stars = document.querySelectorAll(".stars i");
+console.log(stars);
+
+stars.forEach((star, index1) => {
+  star.addEventListener("click", () => {
+    stars.forEach((star, index2) => {
+      index1 >= index2
+        ? star.classList.add("active")
+        : star.classList.remove("active");
+    });
+  });
+});
+
+if (sessionStorage.getItem("currentUserID") == null) {
+  alert("You are not logged In");
+  location.assign("../Store/index.html");
+}

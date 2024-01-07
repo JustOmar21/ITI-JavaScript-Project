@@ -5,6 +5,8 @@
    <!-- Set character set and viewport for responsiveness -->
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+
 
    <!-- Enhance cross-browser consistency and default style normalization -->
    <link rel="stylesheet" href="CSS/normalize.css" />
@@ -35,9 +37,14 @@
 
                <div class="links">
                   <ul>
-                     <li><a href="landingPage.html">Home</a></li>
-                     <li><a href="#">About us</a></li>
-                     <li><a href="#">Contact us</a></li>
+                     <li><a href="../Store/landingPage.html">Home</a></li>
+                     <li><a class="#" href="../categoryPage/categorypage.html">Categories</a></li>
+                     <li><a class="#" href="../Orders/Orders.html">Orders</a></li>
+                     <li><a class="#" href="../Aboutus/aboutus.html">About us</a></li>
+                     <li><a href="../ContactUs/contactus.html">Contact us</a></li>
+                     <li class="shopping"><a href=""><i class="ri-shopping-cart-2-fill"></i></a></li>
+                     <li class="wishing"><a href=""><i class="ri-heart-fill"></i></a>
+                     </li>
                      <li><a href="#" class="btn" id="signout-btn">Sign out</a></li>
                   </ul>
                </div>
@@ -57,11 +64,12 @@
                </div>
 
                <div class="right">
+                  <P id="product-description"></P>
                   <h3 id="product-name"></h3>
                   <h2 id="product-price"></h2>
-                  <button id="add-to-cart">Add To Cart</button>
-                  <button id="add-to-wishlist">Add To Wishlist</button>
-                  <P id="product-description"></P>
+                  <button id="add-to-cart">Add To Cart </button>
+                  <button id="add-to-wishlist">Add To Wishlist </button>
+
                </div>
             </div>
          </div>
