@@ -97,11 +97,21 @@ i {
       font-size: 30px;
 }
 
-td.itemDetails {
-      display: flex;
-      align-items: center;
-      padding: 15px;
+td {
+   text-align: center;
+}
 
+img {
+   width: 100px;
+}
+
+td.itemDetails {
+   display: flex;
+   align-items: center;
+}
+
+.itemDetails span {
+   font-weight: 900;
 }
 
 /* Make it Disable when u want to disappear from user Ui*/
