@@ -63,6 +63,7 @@ function categoryBuilder(Category) {
 function productBuilder(prod, gallaryDiv) {
   let productDiv = document.createElement("div");
   productDiv.classList.add("contant");
+  productDiv.addEventListener("click", () => productPage(prod.id));
 
   let productImg = document.createElement("img");
   productImg.classList.add("images");
@@ -77,18 +78,23 @@ function productBuilder(prod, gallaryDiv) {
   let productPrice = document.createElement("h6");
   productPrice.innerHTML = `${prod.price}$`;
 
-  let cartBtn = document.createElement("button");
-  cartBtn.classList.add("Addtocart");
-  cartBtn.innerHTML = "Add to Cart";
+//   let cartBtn = document.createElement("button");
+//   cartBtn.classList.add("Addtocart");
+//   cartBtn.innerHTML = "Add to Cart";
 
   productDiv.appendChild(productImg);
   productDiv.appendChild(productName);
   productDiv.appendChild(productDesc);
   productDiv.appendChild(productPrice);
-  productDiv.appendChild(cartBtn);
+//   productDiv.appendChild(cartBtn);
 
   gallaryDiv.appendChild(productDiv);
 }
+
+function productPage(prodID) {
+   localStorage.setItem("currentProductID", prodID);
+   location.assign("../productDetails.html");
+ }
 
 function categoryPage(catID) {
   localStorage.setItem("selectedCatID", catID);

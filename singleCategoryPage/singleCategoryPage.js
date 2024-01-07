@@ -61,16 +61,16 @@ function productBuilder(prod, gallaryDiv) {
   let productPrice = document.createElement("h6");
   productPrice.innerHTML = `${prod.price}$`;
 
-  let cartBtn = document.createElement("button");
-  cartBtn.classList.add("Addtocart");
-  cartBtn.innerHTML = "Add to Cart";
+//   let cartBtn = document.createElement("button");
+//   cartBtn.classList.add("Addtocart");
+//   cartBtn.innerHTML = "Add to Cart";
 
   divContain.appendChild(productImg);
   divContain.appendChild(productName);
   divContain.appendChild(productDesc);
   divContain.appendChild(productPrice);
   productDiv.appendChild(divContain);
-  productDiv.appendChild(cartBtn);
+//   productDiv.appendChild(cartBtn);
 
   gallaryDiv.appendChild(productDiv);
 }
