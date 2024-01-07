@@ -50,6 +50,12 @@ function getSingleProductById(id) {
       const allProducts = JSON.parse(localStorage.getItem("product"));
       //get target product by id
       const filterArr = allProducts.filter((product) => { return product.id == id });
+      console.log(filterArr);
+      if(filterArr.length == 0)
+      {
+         alert("Product has been deleted");
+         location.assign("singleCategoryPage/singleCategoryPage.html");
+      }
       const currentProduct = filterArr[0];
 
       return currentProduct;
