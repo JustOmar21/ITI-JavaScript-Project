@@ -292,7 +292,7 @@ function placeTempOrder() {
    let count = 1;
    for (let cart of shoppingCart) {
       for (let prod of products) {
-         if (cart.productID == prod.id) {
+         if (cart.productID == prod.id && cart.userID == sessionStorage.getItem("currentUserID")) {
             let cartPrice = parseFloat(allTrs[count++].childNodes[1].innerHTML);
             if (!(cartPrice == prod.price)) {
                alert("A product price have been updated, reloading the page");
@@ -316,10 +316,11 @@ function placeTempOrder() {
    let userOrder = [];
    for (let cart of shoppingCart) {
       for (let prod of products) {
-         if (cart.productID == prod.id) {
+         
+         if (cart.productID == prod.id && cart.userID == sessionStorage.getItem("currentUserID")) {
             let orderID = localStorage.getItem("orderID") || 0;
             localStorage.setItem("orderID", Number(orderID) + 1);
-            let orderItem = new Order(orderID, cart.productID, prod.name, prod.price, prod.image, cart.quantity, Number(prod.price) * Number(cart.quantity), "Pending", sessionStorage.getItem("currentUserID"));
+            let orderItem = new Order(orderID, cart.productID, prod.name, prod.price, prod.image, cart.quantity, Number(prod.price) * Number(cart.quantity), "Pending", cart.userID);
             userOrder.push(orderItem);
          }
       }

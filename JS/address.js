@@ -123,7 +123,7 @@ function submitFun(e) {
 function placeOrder() {
 
    let tempOrder = JSON.parse(sessionStorage.getItem("order"));
-   tempOrder = tempOrder.filter((order)=>order.userID == sessionStorage.getItem("currentUserID"));
+   tempOrder = tempOrder.filter((order)=>Number(order.userID) == Number(sessionStorage.getItem("currentUserID")));
    console.log(tempOrder);
 
    orderNumber = tempOrder.length;
@@ -148,10 +148,12 @@ function placeOrder() {
       }
    }
    let cartCount = shoppingCart.filter((item) => item.userID == sessionStorage.getItem("currentUserID"));
+   console.log(cartCount +" " + orderNumber + " " + tempOrder);
    cartCount = cartCount.length;
    if (cartCount != orderNumber) {
       alert("A product may have been deleted, refreshing now");
-      location.assign("../shoppingCart");
+      //location.assign("../shoppingCart");
+      return;
    }
 
    for(let order of tempOrder)
