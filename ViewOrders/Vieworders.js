@@ -1,80 +1,149 @@
-const orderDateInput = document.getElementById("orderDate");
+let table = document.querySelector(".responsive-table");
 
-const formatDate = (date) => {
-  const year = date.getFullYear();
-  let month = (date.getMonth() + 1).toString().padStart(2, "0"); // Add leading zero if needed
-  let day = date.getDate().toString().padStart(2, "0"); // Add leading zero if needed
-  return `${year}-${month}-${day}`;
-};
-const today = new Date();
-const todayFormatted = formatDate(today);
-orderDateInput.value = todayFormatted;
-//////////////////////////////////////////////////////////
-let table = document.querySelector("responsive-table");
+function getData() {
+   let orders = JSON.parse(localStorage.getItem("order"));
+   orders = orders.reverse()
+   for (let order of orders) {
+      codeBuilderTRfororders(order);
+   }
+}
+
+
+getData();
+//////////////////////////////////////////////////////////-/-////////////
+
 
 function codeBuilderTRfororders(Order) {
-  let IDOR = document.createElement("td");
-  IDOR.innerHTML = Order.id;
+   let IDOR = document.createElement("td");
+   IDOR.innerHTML = Order.id;
 
-  let productid = document.createElement("td");
-  productid.innerHTML = Order.productid;
+   let productName = document.createElement("td");
+   productName.classList.add("itemDetails");
 
-  let QuantityOR = document.createElement("td");
-  QuantityOR.innerHTML = Order.Quantity;
+   let img = document.createElement("img");
+   img.src = `${Order.productImage}` // it will be dynamic here
 
-  let dataOR = document.createElement("td");
-  let orderdate = document.createElement("input");
-  orderdate.type = "date";
-  dataOR.appendChild(orderdate);
+   let span = document.createElement("span");
+   span.innerHTML = `${Order.productName}` // it will be dynamic here
 
-  let amountOR = document.createElement("td");
-  amountOR.innerHTML = Order.Amount;
+   productName.appendChild(img);
+   productName.appendChild(span);
 
-  let statuesOR = document.createElement("td");
+   let QuantityOR = document.createElement("td");
+   QuantityOR.innerHTML = Order.quantity;
 
-  let acceptBtn = document.createElement("button");
-  acceptBtn.classList.add("accept");
-  acceptBtn.innerHTML = "Accept";
+   let amountOR = document.createElement("td");
+   amountOR.innerHTML = `${Order.total}$`;
 
-  let rejectBtn = document.createElement("button");
-  rejectBtn.classList.add("reject");
-  rejectBtn.innerHTML = "Reject";
+   let statuesOR = document.createElement("td");
 
-  statuesOR.appendChild(acceptBtn);
-  statuesOR.appendChild(document.createTextNode(" "));
-  statuesOR.appendChild(rejectBtn);
+   if (Order.status == "Pending") {
 
-  let userID = document.createElement("td");
-  userID.innerHTML = Order.userid;
+      let acceptBtn = document.createElement("button");
+      acceptBtn.classList.add("accept");
+      acceptBtn.innerHTML = "Accept";
+      acceptBtn.addEventListener("click",acceptOrder);
 
-  let row = document.createElement("tr");
-  row.appendChild(IDOR);
-  row.appendChild(productid);
-  row.appendChild(QuantityOR);
-  row.appendChild(dataOR);
-  row.appendChild(amountOR);
-  row.appendChild(statuesOR);
-  row.appendChild(userID);
+      let rejectBtn = document.createElement("button");
+      rejectBtn.classList.add("reject");
+      rejectBtn.innerHTML = "Reject";
+      rejectBtn.addEventListener("click" , rejectOrder);
 
-  responsive - table.firstElementChild.appendChild(row);
+      statuesOR.appendChild(acceptBtn);
+      statuesOR.appendChild(document.createTextNode(" "));
+      statuesOR.appendChild(rejectBtn);
+   }
+   else {
+      if(Order.status == "Rejected")
+      {
+         statuesOR.style.color = "red";
+      }
+      else
+      {
+         statuesOR.style.color = "green";
+      }
+      statuesOR.innerHTML = Order.status;
+   }
+
+
+
+   let userID = document.createElement("td");
+   userID.innerHTML = Order.userID;
+
+   let row = document.createElement("tr");
+   row.appendChild(IDOR);
+   row.appendChild(productName);
+   row.appendChild(QuantityOR);
+   row.appendChild(amountOR);
+   row.appendChild(statuesOR);
+   row.appendChild(userID);
+
+   table.firstElementChild.appendChild(row);
 }
+
+
+function acceptOrder(e)
+{
+   let orderID = e.currentTarget.parentElement.parentElement.childNodes[0].innerHTML;
+   let orders = JSON.parse(localStorage.getItem("order")) || [];
+   for(let order of orders)
+   {
+      if(order.id == orderID)
+      {
+         order.status = "Accepted";
+         break;
+      }
+   }
+   localStorage.setItem("order",JSON.stringify(orders));
+   location.reload();
+}
+
+
+function rejectOrder(e)
+{
+   let orderID = e.currentTarget.parentElement.parentElement.childNodes[0].innerHTML;
+   let orders = JSON.parse(localStorage.getItem("order")) || [];
+   let products = JSON.parse(localStorage.getItem("product")) || [];
+   for(let order of orders)
+   {
+      if(order.id == orderID)
+      {
+         order.status = "Rejected";
+
+         for(let prod of products)
+         {
+            if(prod.id == order.productID)
+            {
+               prod.quantity += Number(order.quantity);
+               break;
+            }
+         }
+         break;
+      }
+   }
+   localStorage.setItem("product" , JSON.stringify(products));
+   localStorage.setItem("order",JSON.stringify(orders));
+   location.reload();
+}
+
+
 
 //  Local Storage Classes//
 
 class Order {
-  constructor(id, productID, quantity, status, userID) {
-    this.id = id;
-    this.productID = productID;
-    this.quantity = quantity;
-    this.status = status;
-    this.userID = userID;
-  }
+   constructor(id, productID, quantity, status, userID) {
+      this.id = id;
+      this.productID = productID;
+      this.quantity = quantity;
+      this.status = status;
+      this.userID = userID;
+   }
 }
 
 function categoryNumberCheck() {
-  const categoryNumber = document.querySelector(".categoryNumber");
-  let categories = localStorage.getItem("category");
-  categories = categories ? JSON.parse(categories) : 0;
-  categoryNumber.innerText = categories.length;
+   const categoryNumber = document.querySelector(".categoryNumber");
+   let categories = localStorage.getItem("category");
+   categories = categories ? JSON.parse(categories) : 0;
+   categoryNumber.innerText = categories.length;
 }
 categoryNumberCheck();
