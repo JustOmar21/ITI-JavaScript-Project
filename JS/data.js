@@ -9,11 +9,11 @@ class User {
 
 class ShippingInfo {
 
-   constructor(street, city, state, postalCode, country, phone, userID) {
+   constructor(street, city, state, zipcode, country, phone, userID) {
       this.street = street;
       this.city = city;
       this.state = state;
-      this.postalCode = postalCode;
+      this.zipcode = zipcode;
       this.country = country;
       this.phone = phone;
       this.userID = userID;
@@ -55,9 +55,12 @@ class ShoppingCart {
 
 class Order {
 
-   constructor(id, productID, quantity, total, status, userID) {
+   constructor(id, productID, productName , productPrice , productImage, quantity, total, status , userID) {
       this.id = id;
       this.productID = productID;
+      this.productName = productName;
+      this.productPrice = productPrice;
+      this.productImage = productImage;
       this.quantity = quantity;
       this.total = total;
       this.status = status;
