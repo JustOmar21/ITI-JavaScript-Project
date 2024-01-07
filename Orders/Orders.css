@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
+
+
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f2f2f2;
+      min-height: 100vh;
+      overflow-x: hidden;
+      border-radius: 10px;
+}
+
+.container {
+      display: block;
+      justify-content: space-around;
+      margin-top: 20px;
+      border-radius: 10px;
+
+}
+
+.table {
+      display: block;
+      margin-top: 10px;
+      background-color: #eee;
+      width: 80%;
+      margin-left: 10%;
+      overflow-x: auto;
+      border-radius: 10px;
+}
+
+/* .header{
+      width: 100%;
+      padding: 40px;
+} */
+/* #region Table Code */
+
+.header {
+
+      color: rgb(0, 0, 0);
+      background-color: #069b6e41;
+      width: 100%;
+      text-align: center;
+}
+
+.header th {
+      width: 25%;
+      font-size: 21px;
+}
+
+table,
+th,
+tr,
+td {
+      border-collapse: collapse;
+      padding: 20px;
+      font-size: large;
+      text-align: center;
+      width: 50%;
+}
+
+.itemTitle {
+      word-wrap: break-word;
+      display: inline-block;
+}
+
+button {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 8px;
+      box-shadow: 0 8px 8px rgba(0, 0, 0, 0.5);
+      padding: 6px 12px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+}
+
+.add {
+      background-color: dodgerblue;
+}
+
+.remove {
+      background-color: tomato;
+}
+
+.fa-cart-shopping {
+      margin-left: -5px;
+}
+
+.fa-cart-shopping,
+.fa-xmark {
+      color: white;
+}
+
+i {
+      font-size: 30px;
+}
+
+td.itemDetails {
+      display: flex;
+      align-items: center;
+      padding: 15px;
+
+}
+
+/* Make it Disable when u want to disappear from user Ui*/
+.wishID,
+.itemremove {
+      display: none;
+}
+
+.itemDetails {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+}
+
+.itemremove {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+}
+
+.shopping,
+.wishing {
+      font-size: 25px;
+      padding: 0;
+      margin: 0;
+}
+
+.ri-heart-fill {
+      color: #d23d06;
+}
+
+.ri-shopping-cart-2-fill {
+      color: rgba(9, 128, 94, 0.689);
+}
+
+/* #endregion */
+.list {
+      list-style: none;
+      padding: 0;
+}
+
+.wishlist {
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+      background-color: #0fae8154;
+      margin-top: 20px;
+}
+
+.wishlistproduct {
+      width: 81%;
+      height: 570px;
+      border: 1px solid #cccccc81;
+      border-radius: 5px;
+      padding: 10px;
+      box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.4);
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      margin-left: 10%;
+      background-color: #cccccc36;
+}
+
+.wishlist h2 {
+      text-align: center;
+      margin-bottom: 10px;
+}
+
+i {
+      color: red;
+}
+
+.list li {
+      padding: 8px;
+      border-bottom: 1px solid #eee;
+}
+
+.list li:last-child {
+      border-bottom: none;
+}
