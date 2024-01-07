@@ -42,7 +42,7 @@ function toggleAnimation() {
 }
 
 function events() {
-  // toggle_btn.addEventListener("click", toggleAnimation);
+  toggle_btn.addEventListener("click", toggleAnimation);
   hamburger_menu.addEventListener("click", () => {
     big_wrapper.classList.toggle("active");
   });
@@ -50,10 +50,10 @@ function events() {
 
 events();
 
-// const signOutBtn = document.getElementById("signout-btn");
-// signOutBtn.addEventListener("click", function () {
-//   sessionStorage.removeItem("currentUserID");
-//   window.location.assign("Store/index.html");
+const signOutBtn = document.getElementById("signout-btn");
+signOutBtn.addEventListener("click", function () {
+  sessionStorage.removeItem("currentUserID");
+  window.location.assign("Store/index.html");
 
 //   // Get the email parameter from the URL
 //   const urlParams = new URLSearchParams(window.location.search);
@@ -74,4 +74,4 @@ events();
 
 //   // Store the updated array back to localStorage
 //   localStorage.setItem("users", JSON.stringify(updatedUserRecords));
-// });
+});
