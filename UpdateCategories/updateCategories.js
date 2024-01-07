@@ -11,12 +11,12 @@ const catDesc = document.querySelector("#categoryDescription");
 if (localStorage.getItem("categoryID") == null) {
   localStorage.setItem("categoryID", 0);
 }
-////////////////////////////////////////////////////////
-if (localStorage.getItem("updateCatID") == null) {
-  alert("You cannot access this page directly");
-  location.assign("../ViewCategory/ViewCategories.html");
-}
-//////////////////////////////////////////////////////
+// ////////////////////////////////////////////////////////
+// if (localStorage.getItem("updateCatID") == null) {
+//   alert("You cannot access this page directly");
+//   location.assign("../ViewCategory/ViewCategories.html");
+// }
+// //////////////////////////////////////////////////////
 function categoryNumberCheck() {
   const categoryNumber = document.querySelector(".categoryNumber");
   let categories = localStorage.getItem("category");

@@ -2,10 +2,10 @@ let table = document.querySelector("table");
 
 retrieveData();
 
-if (sessionStorage.getItem("currentUserID") == null) {
-  alert("You are not logged In");
-  location.assign("../Store/index.html");
-}
+// if (sessionStorage.getItem("currentUserID") == null) {
+//   alert("You are not logged In");
+//   location.assign("../Store/index.html");
+// }
 
 function retrieveData() {
   let categories = localStorage.getItem("category");
