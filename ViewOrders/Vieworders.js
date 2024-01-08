@@ -42,24 +42,22 @@ function codeBuilderTRfororders(Order) {
       let acceptBtn = document.createElement("button");
       acceptBtn.classList.add("accept");
       acceptBtn.innerHTML = "Accept";
-      acceptBtn.addEventListener("click",acceptOrder);
+      acceptBtn.addEventListener("click", acceptOrder);
 
       let rejectBtn = document.createElement("button");
       rejectBtn.classList.add("reject");
       rejectBtn.innerHTML = "Reject";
-      rejectBtn.addEventListener("click" , rejectOrder);
+      rejectBtn.addEventListener("click", rejectOrder);
 
       statuesOR.appendChild(acceptBtn);
       statuesOR.appendChild(document.createTextNode(" "));
       statuesOR.appendChild(rejectBtn);
    }
    else {
-      if(Order.status == "Rejected")
-      {
+      if (Order.status == "Rejected") {
          statuesOR.style.color = "red";
       }
-      else
-      {
+      else {
          statuesOR.style.color = "green";
       }
       statuesOR.innerHTML = Order.status;
@@ -82,38 +80,30 @@ function codeBuilderTRfororders(Order) {
 }
 
 
-function acceptOrder(e)
-{
+function acceptOrder(e) {
    let orderID = e.currentTarget.parentElement.parentElement.childNodes[0].innerHTML;
    let orders = JSON.parse(localStorage.getItem("order")) || [];
-   for(let order of orders)
-   {
-      if(order.id == orderID)
-      {
+   for (let order of orders) {
+      if (order.id == orderID) {
          order.status = "Accepted";
          break;
       }
    }
-   localStorage.setItem("order",JSON.stringify(orders));
+   localStorage.setItem("order", JSON.stringify(orders));
    location.reload();
 }
 
 
-function rejectOrder(e)
-{
+function rejectOrder(e) {
    let orderID = e.currentTarget.parentElement.parentElement.childNodes[0].innerHTML;
    let orders = JSON.parse(localStorage.getItem("order")) || [];
    let products = JSON.parse(localStorage.getItem("product")) || [];
-   for(let order of orders)
-   {
-      if(order.id == orderID)
-      {
+   for (let order of orders) {
+      if (order.id == orderID) {
          order.status = "Rejected";
 
-         for(let prod of products)
-         {
-            if(prod.id == order.productID)
-            {
+         for (let prod of products) {
+            if (prod.id == order.productID) {
                prod.quantity += Number(order.quantity);
                break;
             }
@@ -121,8 +111,8 @@ function rejectOrder(e)
          break;
       }
    }
-   localStorage.setItem("product" , JSON.stringify(products));
-   localStorage.setItem("order",JSON.stringify(orders));
+   localStorage.setItem("product", JSON.stringify(products));
+   localStorage.setItem("order", JSON.stringify(orders));
    location.reload();
 }
 
