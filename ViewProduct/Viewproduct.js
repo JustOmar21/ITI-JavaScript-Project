@@ -83,13 +83,13 @@ class Product {
    }
 }
 
-function categoryNumberCheck() {
-   const categoryNumber = document.querySelector(".categoryNumber");
-   let categories = localStorage.getItem("category");
-   categories = categories ? JSON.parse(categories) : 0;
-   categoryNumber.innerText = categories.length;
-}
-categoryNumberCheck();
+// function categoryNumberCheck() {
+//    const categoryNumber = document.querySelector(".categoryNumber");
+//    let categories = localStorage.getItem("category");
+//    categories = categories ? JSON.parse(categories) : 0;
+//    categoryNumber.innerText = categories.length;
+// }
+// categoryNumberCheck();
 
 function updateProduct(e) {
    let prodID = e.target.parentElement.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerText;

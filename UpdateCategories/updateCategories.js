@@ -17,14 +17,14 @@ if (localStorage.getItem("categoryID") == null) {
 //   location.assign("../ViewCategory/ViewCategories.html");
 // }
 // //////////////////////////////////////////////////////
-function categoryNumberCheck() {
-  const categoryNumber = document.querySelector(".categoryNumber");
-  let categories = localStorage.getItem("category");
-  categories = categories ? JSON.parse(categories) : [];
-  categoryNumber.innerText = categories.length;
-}
+// function categoryNumberCheck() {
+//   const categoryNumber = document.querySelector(".categoryNumber");
+//   let categories = localStorage.getItem("category");
+//   categories = categories ? JSON.parse(categories) : [];
+//   categoryNumber.innerText = categories.length;
+// }
 
-categoryNumberCheck();
+// categoryNumberCheck();
 
 catName.addEventListener("input", validateName);
 

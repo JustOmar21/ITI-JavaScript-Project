@@ -130,10 +130,10 @@ class Order {
    }
 }
 
-function categoryNumberCheck() {
-   const categoryNumber = document.querySelector(".categoryNumber");
-   let categories = localStorage.getItem("category");
-   categories = categories ? JSON.parse(categories) : 0;
-   categoryNumber.innerText = categories.length;
-}
-categoryNumberCheck();
+// function categoryNumberCheck() {
+//    const categoryNumber = document.querySelector(".categoryNumber");
+//    let categories = localStorage.getItem("category");
+//    categories = categories ? JSON.parse(categories) : 0;
+//    categoryNumber.innerText = categories.length;
+// }
+// categoryNumberCheck();

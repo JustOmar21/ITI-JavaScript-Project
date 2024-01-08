@@ -35,21 +35,21 @@ if (localStorage.getItem("productID") == null) {
   localStorage.setItem("productID", 0);
 }
 
-function categoryNumberCheck() {
-  const categoryNumber = document.querySelector(".categoryNumber");
-  let categories = localStorage.getItem("category");
-  categories = categories ? JSON.parse(categories) : [];
-  categoryNumber.innerText = categories.length;
-}
-function productNumberCheck()
-{
-  const productNumber = document.querySelector(".productNumbers");
-  let products = localStorage.getItem("product");
-  products = products ? JSON.parse(products) : [];
-  productNumber.innerText = products.length;
-}
-categoryNumberCheck();
-productNumberCheck();
+// function categoryNumberCheck() {
+//   const categoryNumber = document.querySelector(".categoryNumber");
+//   let categories = localStorage.getItem("category");
+//   categories = categories ? JSON.parse(categories) : [];
+//   categoryNumber.innerText = categories.length;
+// }
+// function productNumberCheck()
+// {
+//   const productNumber = document.querySelector(".productNumbers");
+//   let products = localStorage.getItem("product");
+//   products = products ? JSON.parse(products) : [];
+//   productNumber.innerText = products.length;
+// }
+// categoryNumberCheck();
+// productNumberCheck();
 
 class Category {
   constructor(id, name, description) {

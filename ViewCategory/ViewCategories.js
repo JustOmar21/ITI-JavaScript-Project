@@ -50,12 +50,12 @@ function codeBuilderTR(cat) {
   table.firstElementChild.appendChild(TR);
 }
 
-function categoryNumberCheck() {
-  const categoryNumber = document.querySelector(".categoryNumber");
-  let categories = localStorage.getItem("category");
-  categories = categories ? JSON.parse(categories) : [];
-  categoryNumber.innerText = categories.length;
-}
+// function categoryNumberCheck() {
+//   const categoryNumber = document.querySelector(".categoryNumber");
+//   let categories = localStorage.getItem("category");
+//   categories = categories ? JSON.parse(categories) : [];
+//   categoryNumber.innerText = categories.length;
+// }
 
 function updateCategory(e) {
   let catID =
@@ -80,7 +80,7 @@ function removeCategory(e) {
     }
   }
   localStorage.setItem("category", JSON.stringify(categories));
-  categoryNumberCheck();
+//   categoryNumberCheck();
 }
 
 function removeProduct(singleCat) {
@@ -106,7 +106,7 @@ function removeWish(singleProduct) {
   localStorage.setItem("wishlist", JSON.stringify(wishlists));
 }
 
-categoryNumberCheck();
+// categoryNumberCheck();
 
 // #region Local Storage Classes
 

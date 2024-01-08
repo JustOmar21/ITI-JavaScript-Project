@@ -15,15 +15,15 @@ if (localStorage.getItem("categoryID") == null) {
     localStorage.setItem("categoryID", 0);
 }
 
-function categoryNumberCheck()
-{
-    const categoryNumber = document.querySelector(".categoryNumber");
-    let categories = localStorage.getItem("category");
-    categories = categories ? JSON.parse(categories) : 0;
-    categoryNumber.innerText=categories.length;
-}
+// function categoryNumberCheck()
+// {
+//     const categoryNumber = document.querySelector(".categoryNumber");
+//     let categories = localStorage.getItem("category");
+//     categories = categories ? JSON.parse(categories) : 0;
+//     categoryNumber.innerText=categories.length;
+// }
 
-categoryNumberCheck();
+// categoryNumberCheck();
 
 
 catName.addEventListener("input", validateName);
