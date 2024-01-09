@@ -61,7 +61,7 @@ stars.forEach((star, index1) => {
   });
 });
 
-if (sessionStorage.getItem("currentUserID") == null) {
-  alert("You are not logged In");
-  location.assign("../Store/index.html");
-}
+// if (sessionStorage.getItem("currentUserID") == null) {
+//   alert("You are not logged In");
+//   location.assign("../Store/index.html");
+// }

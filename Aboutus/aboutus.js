@@ -4,7 +4,7 @@ signOutBtn.addEventListener("click", function () {
   window.location.assign("../Store/index.html");
 });
 
-if (sessionStorage.getItem("currentUserID") == null) {
-  alert("You are not logged In");
-  location.assign("../Store/index.html");
-}
+// if (sessionStorage.getItem("currentUserID") == null) {
+//   alert("You are not logged In");
+//   location.assign("../Store/index.html");
+// }
