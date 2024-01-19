@@ -1,4 +1,4 @@
-# ITI-JavaScript-Project-MyPart
+# ITI E-Commerce Project
 An E-commerce project that utilizes HTML , CSS , JavaScript .
 The Project uses Local Storage as a Database
 
