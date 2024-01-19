@@ -17,6 +17,7 @@ function getData() {
   let orders = JSON.parse(localStorage.getItem("order"));
   orders = orders.reverse();
   for (let order of orders) {
+   if(order.userID == sessionStorage.getItem("currentUserID"));
     codeBuilderTRfororders(order);
   }
 }
