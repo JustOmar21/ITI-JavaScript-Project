@@ -1,3 +1,13 @@
-# ITI-JavaScript-Project-MyPart
+# ITI E-Commerce Project
 An E-commerce project that utilizes HTML , CSS , JavaScript .
-The attached code is my part of the project whether it is used or not
+The Project uses Local Storage as a Database
+
+as a Customer you can browse products , put them in the Wish List or Shopping Cart , Order Them 
+
+
+
+the site operate on the concept of a single admin who is the sole seller
+
+as an admin you can add , update , edit , delete products
+you can approve or reject orders from customers
+you can add categories where you would add products to
