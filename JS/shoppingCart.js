@@ -2,7 +2,7 @@ const signOutBtn = document.getElementById("signout-btn");
 
 signOutBtn.addEventListener("click", function () {
   sessionStorage.removeItem("currentUserID");
-  window.location.assign("../Store/index.html");
+  window.location.assign("Store/index.html");
 });
 
 class Order {
@@ -64,7 +64,7 @@ for (let ele in sub) {
 function getData() {
   if (sessionStorage.getItem("currentUserID") == null) {
     alert("You are not logged In");
-    location.assign("../Store/index.html");
+    location.assign("Store/index.html");
   }
   /////////////////////////////////////////////////////////
   let currentUser = sessionStorage.getItem("currentUserID");
@@ -324,6 +324,7 @@ function placeTempOrder() {
   if (cartCount != orderNumber) {
     alert("A product may have been deleted, refreshing now");
     location.reload();
+    return;
   }
 
   let userOrder = [];

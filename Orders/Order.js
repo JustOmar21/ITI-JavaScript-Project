@@ -1,7 +1,7 @@
 const signOutBtn = document.getElementById("signout-btn");
 signOutBtn.addEventListener("click", function () {
   sessionStorage.removeItem("currentUserID");
-  window.location.assign("../Store/index.html");
+  window.location.assign("Store/index.html");
 });
 
 let table = document.querySelector("table");
@@ -10,7 +10,7 @@ getData();
 ///////////////////////////////////////////////////////////////
 if (sessionStorage.getItem("currentUserID") == null) {
   alert("You are not logged In");
-  location.assign("../Store/index.html");
+  location.assign("Store/index.html");
 }
 ///////////////////////////////////////////////////////////
 function getData() {
