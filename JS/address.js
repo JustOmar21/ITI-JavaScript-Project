@@ -155,14 +155,14 @@ function placeOrder() {
         let orderPrice = tempOrder[count++].productPrice;
         if (!(orderPrice == prod.price)) {
           alert("A product price have been updated, redirecting the page");
-          location.assign("../shoppingCart");
+          location.assign("../shoppingCart.html");
         }
         console.log(Number(order.quantity) > Number(prod.quantity));
         if (Number(order.quantity) > Number(prod.quantity)) {
           alert(
             `the "${prod.name}" product has only ${prod.quantity} units, please lower your order quantity`
           );
-          location.assign("../shoppingCart");
+          location.assign("../shoppingCart.html");
         }
       }
     }
@@ -174,7 +174,7 @@ function placeOrder() {
   cartCount = cartCount.length;
   if (cartCount != orderNumber) {
     alert("A product may have been deleted, refreshing now");
-    //location.assign("../shoppingCart");
+    location.assign("../shoppingCart.html");
     return;
   }
 
