@@ -201,7 +201,7 @@ function placeOrder() {
   localStorage.setItem("shoppingCart", JSON.stringify(shoppingCart));
   sessionStorage.removeItem("order");
   localStorage.setItem("order", JSON.stringify(orders));
-  location.assign("../Orders/Orders.html");
+  location.assign("Orders/Orders.html");
 }
 
 function validateStreet() {
