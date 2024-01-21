@@ -56,12 +56,12 @@ getData();
 function getData() {
   if (sessionStorage.getItem("order") == null) {
     alert("you cannot access this page directly, Please place an order first!");
-    location.assign("../shoppingCart.html");
+    location.assign("shoppingCart.html");
   }
   /////////////////////////////////////////////////////////
   if (sessionStorage.getItem("currentUserID") == null) {
     alert("you are not logged in");
-    location.assign("../Store/index.html");
+    location.assign("Store/index.html");
   }
   ////////////////////////////////////////////////////
   let userShips = JSON.parse(localStorage.getItem("shippingInfo")) || [];
@@ -155,14 +155,14 @@ function placeOrder() {
         let orderPrice = tempOrder[count++].productPrice;
         if (!(orderPrice == prod.price)) {
           alert("A product price have been updated, redirecting the page");
-          location.assign("../shoppingCart.html");
+          location.assign("shoppingCart.html");
         }
         console.log(Number(order.quantity) > Number(prod.quantity));
         if (Number(order.quantity) > Number(prod.quantity)) {
           alert(
             `the "${prod.name}" product has only ${prod.quantity} units, please lower your order quantity`
           );
-          location.assign("../shoppingCart.html");
+          location.assign("shoppingCart.html");
         }
       }
     }
@@ -174,7 +174,7 @@ function placeOrder() {
   cartCount = cartCount.length;
   if (cartCount != orderNumber) {
     alert("A product may have been deleted, refreshing now");
-    location.assign("../shoppingCart.html");
+    location.assign("shoppingCart.html");
     return;
   }
 
