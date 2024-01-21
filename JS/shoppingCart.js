@@ -353,5 +353,5 @@ function placeTempOrder() {
 
   console.log(userOrder);
   sessionStorage.setItem("order", JSON.stringify(userOrder));
-  location.assign("../address.html");
+  location.assign("address.html");
 }
